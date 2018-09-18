@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script type="text/javascript">
+	//使用内嵌式定义函数calc（）
+		function calc()
+	    {
+		   //获取id为input1输入域的值，并赋给变量dividend
+		   var dividend = document.getElementById("input1").value;
+		   //获取id为input2输入域的值，并赋给变量divisor
+		   var divisor = document.getElementById("input2").value;
+		   var result = 0;
+		   result = dividend / divisor;
+		   //弹出对话框，显示计算结果
+		   alert("运行结果： " + dividend + "/" + divisor + " = " + result);
+		}
+     </script>
+</head>
+<body>
+      <!--在form标签中使用onSubmit事件处理程序调用calc（）函数  -->
+ 	  <form id="calc"name="calcForm"action="#"method="post"onSubmit="calc()">
+			被除数：
+			<input type="text" name="divdend" id="input1"></br></br>
+			除 &nbsp;数：
+			<input type="text" name="divisor" id="input2"></br></br>
+			<input type="submit" id="btn"value="计算">
+
+      </form>
+</body>
+</html>
